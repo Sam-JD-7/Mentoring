@@ -1,0 +1,31 @@
+.carddiv
+{
+    padding-top: 5%;
+    /* display: inline-table; */
+    margin: 0 -5px;
+    display:flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  /* background-color: black; */
+
+}
+.carddiv1
+{
+    margin-left: 5%;
+    display: table-cell;
+    float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+.navbar1
+{
+    background-color: black ;
+    height: 10%;
+    margin-left: 0%;
+}
+
+.styled-card{
+  width: 18rem;
+  background-color:rgb(79, 158, 197);
+}
+

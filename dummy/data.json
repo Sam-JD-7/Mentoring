@@ -1,0 +1,129 @@
+{
+  "details": [
+    {
+      "user": "11",
+      "password": "11",
+      "fname": "11",
+      "lname": "11",
+      "regno": "11",
+      "fathername": "11",
+      "mothername": "11",
+      "email": "11",
+      "number": "11",
+      "mentor": "11",
+      "mentormail": "11",
+      "id": 1
+    },
+    {
+      "user": "11",
+      "password": "11",
+      "fname": "11",
+      "lname": "11",
+      "regno": "11",
+      "fathername": "11",
+      "mothername": "11",
+      "email": "11",
+      "number": "11",
+      "mentor": "11",
+      "mentormail": "11",
+      "id": 2
+    },
+    {
+      "user": "Rakesh",
+      "password": "1",
+      "fname": "11",
+      "lname": "11",
+      "regno": "186",
+      "fathername": "11",
+      "mothername": "111",
+      "email": "111",
+      "number": "111",
+      "mentor": "SamJebadurai",
+      "mentormail": "samjebadurait.20cse@kongu.edu",
+      "id": 4,
+      "cgpa":[9,8,7,10],
+      "sem1": {
+        "sub1": "math"
+      }
+    },
+    {
+      "user": "Santhosh Kumar M",
+      "password": "santhosh",
+      "fname": "Santhosh",
+      "lname": "Kumar M",
+      "regno": "132",
+      "fathername": "Murugan H",
+      "mothername": "Rajeshwari M",
+      "email": "santhoshkumarm.19it@kongu.edu",
+      "number": "9876543210",
+      "mentor": "SamJebadurai",
+      "mentormail": "samjebadurait.20cse@kongu.edu",
+      "sem1": {
+        "sub1": "math"
+      },
+      "id": 3
+    },
+    {
+      "user": "Joker",
+      "password": "12",
+      "fname": "12",
+      "lname": "12",
+      "regno": "12",
+      "fathername": "12",
+      "mothername": "21",
+      "email": "21",
+      "number": "21",
+      "mentor": "batman",
+      "mentormail": "batman",
+      "id": 5
+    },
+    {
+      "user": "",
+      "password": "",
+      "fname": "",
+      "lname": "",
+      "regno": "",
+      "fathername": "",
+      "mothername": "",
+      "email": "",
+      "number": "",
+      "mentor": "",
+      "mentormail": "",
+      "id": 6
+    },
+    {
+      "user": "John V",
+      "password": "11",
+      "fname": "11",
+      "lname": "11",
+      "regno": "11",
+      "fathername": "11",
+      "mothername": "11",
+      "email": "11",
+      "number": "11",
+      "mentor": "samJebadurai",
+      "mentormail": "samjebadurait.20cse@kongu.edu",
+      "id": 7,
+      "sem1": {
+        "sub1": "math"
+      }
+    },
+    {
+      "user": "Suresh",
+      "password": "1",
+      "fname": "11",
+      "lname": "11",
+      "regno": "187",
+      "fathername": "11",
+      "mothername": "111",
+      "email": "111",
+      "number": "111",
+      "mentor": "SamJebadurai",
+      "mentormail": "samjebadurait.20cse@kongu.edu",
+      "id": 8,
+      "sem1": {
+        "sub1": "math"
+      }
+    }
+  ]
+}
