@@ -48,7 +48,7 @@ export const Home=()=>{
             {l1}
             </tbody>
         </table>
-        <button onClick={add}>Add</button>
+        {/* <button onClick={add}>Add</button> */}
         </>
     );
 }
