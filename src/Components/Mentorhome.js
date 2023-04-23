@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import axios from 'axios';
 import './mymentees.css'
 import MentorNavbar from "./MentorNavbar";
-export const Home=()=>{
+export const MentorHome=()=>{
     const[list,setList]=useState([]);
     useEffect(()=>{
     axios.get("http://localhost:3500/details").then(

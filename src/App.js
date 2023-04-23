@@ -1,11 +1,12 @@
 import './App.css';
 import { Student } from './Components/StudentSignup';
-import { Home } from './Components/Mentorhome';
+import { MentorHome } from './Components/Mentorhome';
 import { MenteeHome } from './Components/MenteeHome';
 import { Mentor } from './Components/MentorSignup';
 import LoginPage from './Components/LoginPage';
 import { Route,Routes } from 'react-router-dom';
-import StudentHome from './Components/Home';
+import Semester from './Components/Semester';
+import Home from './Components/Home';
 import Chart from './Components/Chart';
 const myStyle={
   backgroundImage: 
@@ -18,11 +19,12 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<LoginPage/>}></Route>
-        <Route path='/studenthome' element={<StudentHome/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/semester' element={<Semester/>}></Route>
         <Route path='/student' element={<Student/>}></Route>
         <Route path='/mentor' element={<Mentor/>}></Route>
-        <Route path='/mentorhome' element={<Home/>}></Route>
+        <Route path='/mentorhome' element={<MentorHome/>}></Route>
         <Route path='/mentee' element={<MenteeHome/>}></Route>
         {/* <Route path='/progress' element={<Chart/>}></Route> */}
       </Routes>

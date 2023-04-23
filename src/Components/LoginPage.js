@@ -28,7 +28,7 @@ function LoginPage() {
   {
     e.preventDefault();
     localStorage.setItem("uemail",uemail);
-     navigate('/studenthome')
+     navigate('/semester')
   }
 
   return (
