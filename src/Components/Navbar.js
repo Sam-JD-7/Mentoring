@@ -41,7 +41,7 @@ export const Navbars=()=>
           
           <li class="nav-item active">
           
-          <a class="nav-link" href="#"><i class="fas fa-envelope me-1"></i>Contact</a>
+          <a class="nav-link" href="/mentee"><i class="fas fa-envelope me-1"></i>Profile</a>
           
           </li>
           

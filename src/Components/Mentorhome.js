@@ -14,7 +14,6 @@ export const Home=()=>{
                 if(resp.data[i].mentormail===localStorage.getItem("email"))
                 {
                     setList((prev)=>[...prev,resp.data[i]])
-                    
                     // console.log(resp.data[i])
                     // setList(prev=>{return {...list,resp.data[i]}})
                 }

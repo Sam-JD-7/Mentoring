@@ -160,7 +160,7 @@ export const MenteeHome=()=>
     <table className="styled-table">
       <tbody>
   <tr>
-  <td>Username:</td>
+  <td style={{width:"55%"}}>Username:</td>
   <td> {list.user}</td>
   </tr>
   <tr>
@@ -170,14 +170,6 @@ export const MenteeHome=()=>
   <tr>
   <td>Registration Number:</td>
   <td> {list.regno}</td>
-  </tr>
-  <tr>
-  <td>First Name:</td>
-  <td> {list.fname}</td>
-  </tr>
-  <tr>
-  <td>Last Name:</td>
-  <td> {list.lname}</td>
   </tr>
   <tr>
   <td>Father's Name:</td>
@@ -211,55 +203,112 @@ export const MenteeHome=()=>
   </table>
 </div>
     :
-    <div className="profile-edit">
-    <table className="table-ment">
-      <tbody>
-        <tr>
-          <td><label>USERNAME</label></td>
-          <td><input type="text" value={list.user}  name="user" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>PASSWORD</label></td>
-          <td><input type="password" value={list.password} name="password" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>FIRSTNAME</label></td>
-          <td><input type="text" value={list.fname} name="fname" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>LASTNAME</label></td>
-          <td><input type="text" value={list.lname} name="lname" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>REGNO</label></td>
-          <td><input type="text" value={list.regno} name="regno" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>FATHER'S NAME</label></td>
-          <td><input type="text" value={list.fathername} name="fathername" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>MOTHER'S NAME</label></td>
-          <td><input type="text" value={list.mothername} name="mothername" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>EMAIL</label></td>
-          <td><input type="email" value={list.email} name="email" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>MOBILE NUMBER</label></td>
-          <td><input type='tel' value={list.number} name="number" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td><label>MENTOR NAME</label></td>
-          <td><input type="text" value={list.mentor} name="mentor" onChange={editProfile}></input><br/></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><button  className="edit-button" onClick={saveProfile}>Save</button></td>
-        </tr>
-      </tbody>
-      </table>
+  <div class="container">
+
+  <div class="row">
+  
+      <div class="col-lg-6 mx-auto mt-4">
+      
+          <div class="card shadow">
+      
+              <div class="card-header bg-primary">
+      
+                  <h3 class="text-light">Edit Details</h3>
+      
+              </div>
+      
+          <div class="card-body p-4">
+      
+              <form action={saveProfile} id="add-form" enctype="multipart/form-data">
+      
+                  <div class="mb-3">
+      
+                      <label for="user">Name</label>
+                      
+                      <input type="text" name="user" class="form-control form-control-lg" value={list.user} onChange={editProfile} required />  
+                  </div>
+      
+                  <div class="mb-3">
+      
+                      <label for="password">Password</label>
+                      
+                      <input type="text" name="password" class="form-control form-control-lg" value={list.password} onChange={editProfile} required />  
+                  </div>
+
+                  <div class="mb-3">
+      
+                      <label for="regno">Registration Number</label>
+                      
+                      <input type="text" name="regno" class="form-control form-control-lg" value={list.regno} onChange={editProfile} required />  
+                  </div>
+      
+                  <div class="mb-3">
+                      
+                      <label for="fathername">Father's Name</label>
+                      
+                      <input type="text" name="fathername" class="form-control form-control-lg" value={list.fathername} onChange={editProfile} required />  
+                  </div>
+
+                  <div class="mb-3">
+      
+                      <label for="mothername">Mothername</label>
+                      
+                      <input type="text" name="mothername" class="form-control form-control-lg" value={list.mothername} onChange={editProfile} required />  
+                  </div>
+
+                  <div class="mb-3">
+                  
+                      <label for="email">Email</label>
+                      
+                      <input type="email" name="email" class="form-control form-control-lg" value={list.email} onChange={editProfile} required />
+                  
+                  </div>
+                  <div class="mb-3">
+
+                      <label for="number">Phone number</label>
+                      
+                      <input type="tel" name="number" class="form-control form-control-lg" value={list.number} onChange={editProfile} required />
+                      
+                  </div>
+          
+                  <div class="mb-3">
+                  
+                      <label for="image" class="form-label">Upload Photo</label>
+                      
+                      <input class="form-control form-control-lg" type="file" name="image" />
+                  
+                  </div>
+
+                  <div class="mb-3">
+
+                      <label for="mentorname">Mentor Name</label>
+                      
+                      <input type="tel" name="mentorname" class="form-control form-control-lg" value={list.mentor} onChange={editProfile} required />
+                      
+                  </div>
+
+                  <div class="mb-3">
+
+                      <label for="mentormail">Mentor Email</label>
+                      
+                      <input type="tel" name="mentormail" class="form-control form-control-lg" value={list.mentormail} onChange={editProfile} required />
+                      
+                  </div>
+          
+                  <div class="mb-3 d-grid">
+                  
+                      <input type="submit" name="submit" value="Save" class="btn btn-primary btn-lg" />
+                  
+                  </div>
+                  
+              </form>
+          
+          </div>
+          
+      </div>
+          
+  </div>
+  </div>
   </div>
 }
 </div>
