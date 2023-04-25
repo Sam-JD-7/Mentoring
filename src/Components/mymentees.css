@@ -73,6 +73,8 @@
     color: white;
     font-weight: bold;
     height:auto;
+    box-shadow: #009879;
+    position: absolute;
 }
 .entry input{
     margin:20px;
@@ -96,4 +98,10 @@
 }
 .entry select option{
     color: black;
+}
+.coursesBg{
+    background-image: url("bg_img.jpg");
+     background-size: cover;
+     background-position: center;
+     height:100vh;
 }

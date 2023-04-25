@@ -34,7 +34,8 @@ function Courses() {
     setGrade("O")
   }
   return (
-    <div style={{ backgroundImage: `url(${bg})`, backgroundPosition: "centre", backgroundSize: "cover", width: "100%", height: "100vh" }}>
+    <>
+    <div className="coursesBg" >
       <div className='entry'>
         <br></br>
         <br></br>
@@ -62,7 +63,7 @@ function Courses() {
             </div>
             <button type="submit">Add</button>
           </form> : ""}
-      </div>
+        
       {list.length >= 1 ?
         <>
           <table className="styled-table">
@@ -116,7 +117,10 @@ function Courses() {
 
 
         : ""}
-    </div>
+        </div>
+        </div>
+        </>
+    
   )
 }
 
