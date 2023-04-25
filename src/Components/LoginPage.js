@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useNavigate} from "react-router-dom"
 import './LoginPage.css'
 import axios from'axios'
-
+import './home.css'
 
 function LoginPage() {
 
@@ -32,6 +32,7 @@ function LoginPage() {
   }
 
   return (
+    <div className='img'>
 <article> 
      <div className='Login_Page'>
  
@@ -126,6 +127,7 @@ function LoginPage() {
       
     </div>
     </article>
+    </div>
 
 
   )

@@ -28,11 +28,7 @@ export const Navbars=()=>
       
       </li>
       
-      <li class="nav-item active">
-      
-      <a class="nav-link" href="/add"><i class="fas fa-user-plus me-1"></i>Add User</a>
-      
-      </li>
+    
       <li class="nav-item active">
 
           <a class="nav-link" href="#"><i class="fas fa-globe me-1"></i>About</a>
@@ -44,6 +40,12 @@ export const Navbars=()=>
           <a class="nav-link" href="/mentee"><i class="fas fa-envelope me-1"></i>Profile</a>
           
           </li>
+
+        <li class="nav-item active">
+      
+      <a class="nav-link" href="/login"><i class="fas fa-user-plus me-1"></i>LogOut</a>
+      
+      </li>
           
           </ul>
           

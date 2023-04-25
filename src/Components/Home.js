@@ -11,7 +11,7 @@ function Home() {
       <nav>
         <div class="menu">
           <div class="logo">
-            <a href="#">Emen</a>
+            <a href="#">E - M e n t o r i n g</a>
           </div>
           <ul>
             <li><a href="#">Home</a></li>
@@ -25,7 +25,7 @@ function Home() {
       </nav>
       <div class="img"></div>
           <div class="center">
-            <div class="title">Ementoring</div>
+            <div class="title">Easy way of mentoring</div>
             {/* <div class="sub_title">Dont lost your Data</div> */}
             <div class="btns">
               <button>Learn More</button>

@@ -3,7 +3,10 @@ import { useState,useEffect } from "react";
 import axios from 'axios';
 import './mymentees.css'
 import MentorNavbar from "./MentorNavbar";
+import { useNavigate } from "react-router-dom";
+
 export const MentorHome=()=>{
+    const navigate=useNavigate()
     const[list,setList]=useState([]);
     useEffect(()=>{
     axios.get("http://localhost:3500/details").then(
@@ -30,9 +33,9 @@ export const MentorHome=()=>{
         .catch(err=>console.log(err))
         }
     }
-    const l1=list.map((x,index)=><tr key={index}><td>{x.user}</td><td>{x.regno}</td><td><button className="styled-button">View progress</button></td> <td><button className="styled-button">Message</button></td></tr>)
+    const l1=list.map((x,index)=><tr key={index}><td>{x.user}</td><td>{x.regno}</td><td><button className="styled-button" onClick={()=>navigate("/semester")}>View progress</button></td> <td><button className="styled-button">Message</button></td></tr>)
     return(
-        <>
+        <div style={{position:"relative"}}>
         <MentorNavbar/>
         <table className="styled-table">
             <thead>
@@ -48,6 +51,6 @@ export const MentorHome=()=>{
             </tbody>
         </table>
         {/* <button onClick={add}>Add</button> */}
-        </>
+        </div>
     );
 }

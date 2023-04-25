@@ -1,13 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import bg from './bg_img.jpg'
 import axios from 'axios';
 import '../Components/card.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbars } from './Navbar';
+import { useNavigate } from 'react-router-dom';
 function Semester() {
+  const navigate=useNavigate()
   const[user,setUser]=useState("")
     const[password,setPassword]=useState("")
     const[Cpassword,setCpassword]=useState("")
@@ -66,7 +69,7 @@ function Semester() {
         console.log(details)
     }
   return (
-    <div>
+    <div style={{backgroundImage:`url(${bg})`}}>
       <Navbars/>
     <div className='carddiv'>
     <div className='carddiv1'>
@@ -74,7 +77,7 @@ function Semester() {
       <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/326/326808.png" width={1000} />
       <Card.Body>
         <Card.Title>SEMESTER 1</Card.Title>
-        <Button variant="primary">Edit</Button>
+        <Button variant="primary"onClick={()=>navigate("/courses")}>Edit</Button>
       </Card.Body>
     </Card>
     </div>

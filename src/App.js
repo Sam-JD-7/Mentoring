@@ -8,6 +8,7 @@ import { Route,Routes } from 'react-router-dom';
 import Semester from './Components/Semester';
 import Home from './Components/Home';
 import Chart from './Components/Chart';
+import Courses from './Components/Courses';
 const myStyle={
   backgroundImage: 
 "url('https://media.geeksforgeeks.org/wp-content/uploads/rk.png')",
@@ -27,6 +28,7 @@ function App() {
         <Route path='/mentorhome' element={<MentorHome/>}></Route>
         <Route path='/mentee' element={<MenteeHome/>}></Route>
         {/* <Route path='/progress' element={<Chart/>}></Route> */}
+        <Route path='/courses' element={<Courses/>}/>
       </Routes>
     </div>
   );
