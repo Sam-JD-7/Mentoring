@@ -134,7 +134,7 @@ export const Student=()=>{
         
             <div class="card-body p-4">
         
-                <form action="/add" id="add-form" enctype="multipart/form-data">
+                <form action={submit} id="add-form" enctype="multipart/form-data">
         
                     <div class="mb-3">
         
