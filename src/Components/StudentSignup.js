@@ -4,35 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 // export const Student=()=>
 // {
-//     const navigate=useNavigate();
-//     const[user,setUser]=useState("")
-//     const[password,setPassword]=useState("")
-//     const[Cpassword,setCpassword]=useState("")
-//     const[regno,setRegno]=useState("");
-//     const[fname,setFname]=useState("");
-//     const[lname,setLname]=useState("");    
-//     const[fathername,setFathername]=useState("");
-//     const[mothername,setMothername]=useState("");
-//     const[email,setEmail]=useState("");
-//     const[number,setNumber]=useState("");
-//     const[mentor,setMentor]=useState("");
-//     const[mentormail,setMentormail]=useState("");
-//     const[details,setDetails]=useState([]);
-//     const submit=()=>
-//     {
-//         if(password===Cpassword)
-//         {
-        
-//         setDetails([...details,{"user":user,"password":password,"fname":fname,"lname":lname,"regno":regno,"fathername":fathername,"mothername":mothername,"email":email,"number":number,"mentor":mentor,"mentormail":mentormail}])
-//         axios.post("http://localhost:3500/details",{"user":user,"password":password,"fname":fname,"lname":lname,"regno":regno,"fathername":fathername,"mothername":mothername,"email":email,"number":number,"mentor":mentor,"mentormail":mentormail}).
-//         then((response)=>{console.log(response)}).catch((err)=>{console.log(err)})
-//         // navigate()
-//         }
-//         else
-//         {
-//             alert("Password didnot match");
-//         }
-//     }
+    
 //     const clear=()=>
 //     {
 //         setUser("")
@@ -116,6 +88,35 @@ import axios from 'axios'
 //     );
 // }
 export const Student=()=>{
+    const navigate=useNavigate();
+    const[user,setUser]=useState("")
+    const[password,setPassword]=useState("")
+    const[Cpassword,setCpassword]=useState("")
+    const[regno,setRegno]=useState(""); 
+    const[fathername,setFathername]=useState("");
+    const[mothername,setMothername]=useState("");
+    const[email,setEmail]=useState("");
+    const[mentor,setMentor]=useState("");
+    const[gender,setGender]=useState("");
+    const[dob,setDob]=useState("")
+    const[mentormail,setMentormail]=useState("");
+    const[address,setAddress]=useState("");
+    const[details,setDetails]=useState([]);
+    const submit=()=>
+    {
+        if(password===Cpassword)
+        {
+        
+        setDetails([...details,{"user":user,"password":password,"regno":regno,"fathername":fathername,"mothername":mothername,"email":email,"mentor":mentor,"mentormail":mentormail}])
+        axios.post("http://localhost:3500/details",{"user":user,"password":password,"regno":regno,"fathername":fathername,"mothername":mothername,"email":email,"mentor":mentor,"mentormail":mentormail}).
+        then((response)=>{console.log(response)}).catch((err)=>{console.log(err)})
+        // navigate()
+        }
+        else
+        {
+            alert("Password didnot match");
+        }
+    }
     return(
     <div class="container">
 
@@ -133,27 +134,27 @@ export const Student=()=>{
         
             <div class="card-body p-4">
         
-                <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                <form action="/add" id="add-form" enctype="multipart/form-data">
         
                     <div class="mb-3">
         
                         <label for="name">Name</label>
                         
-                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter name" required />  
+                        <input type="text" name="name" value={user} class="form-control form-control-lg" placeholder="Enter name" onChange={(e)=>setUser(e.target.value)} required />  
                     </div>
         
                     <div class="mb-3">
                     
                         <label for="email">Email</label>
                         
-                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter email" required />
+                        <input type="email" name="email" value={email} class="form-control form-control-lg" placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)} required />
                     
                     </div>
                     <div class="mb-3">
 
                         <label for="regno">Register Number</label>
                         
-                        <input type="text" name="regno" class="form-control form-control-lg" placeholder="Register Number" required />
+                        <input type="text" name="regno" value={regno} class="form-control form-control-lg" placeholder="Register Number" onChange={(e)=>setRegno(e.target.value)} required />
                         
                     </div>
 
@@ -161,7 +162,15 @@ export const Student=()=>{
 
                         <label for="password">Password</label>
                         
-                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                        <input type="password" name="password" value={password} class="form-control form-control-lg" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} required />
+                        
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="cpassword">Correct Password</label>
+                        
+                        <input type="password" name="cpassword" value={Cpassword} class="form-control form-control-lg" placeholder="Password" onChange={(e)=>setCpassword(e.target.value)} required />
                         
                     </div>
 
@@ -169,7 +178,8 @@ export const Student=()=>{
 
                         <label for="gender">Gender</label>
                         
-                        <select type="password" name="password" class="form-control form-control-lg" placeholder="Password" required >
+                        <select value={gender} class="form-control form-control-lg"  onChange={(e)=>setGender(e.target.value)} required >
+                        <option value="" selected disabled hidden>--Choose here--</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         </select>
@@ -178,7 +188,7 @@ export const Student=()=>{
 
                         <label for="dob">DOB</label>
                         
-                        <input type="date" name="dob" class="form-control form-control-lg" placeholder="DOB" required />
+                        <input type="date" name="dob" value={dob} class="form-control form-control-lg" onChange={(e)=>setDob(e.target.value)} required />
                         
                     </div>
 
@@ -186,7 +196,7 @@ export const Student=()=>{
 
                         <label for="phone">Phone</label>
                         
-                        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter phone" required />
+                        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter phone" onChange={(e)=>setUser(e.target.value)} required />
                         
                     </div>
              */}
@@ -202,7 +212,7 @@ export const Student=()=>{
 
                         <label for="mentorname">Mentor Name</label>
                         
-                        <input type="text" name="mentorname" class="form-control form-control-lg" placeholder="Mentor Name" required />
+                        <input type="text" name="mentorname" value={mentor} class="form-control form-control-lg" placeholder="Mentor Name" onChange={(e)=>setMentor(e.target.value)} required />
                         
                     </div>
 
@@ -210,7 +220,7 @@ export const Student=()=>{
 
                         <label for="mentormail">Mentor Email</label>
                         
-                        <input type="text" name="mentormail" class="form-control form-control-lg" placeholder="MentorEmail" required />
+                        <input type="email" name="mentormail" value={mentormail} class="form-control form-control-lg" placeholder="MentorEmail" onChange={(e)=>setMentormail(e.target.value)} required />
                         
                     </div>
 
@@ -218,14 +228,14 @@ export const Student=()=>{
 
                         <label for="mothername">Mother's Name</label>
                         
-                        <input type="text" name="mothername" class="form-control form-control-lg" placeholder="Mother's name" required />
+                        <input type="text" name="mothername" value={mothername} class="form-control form-control-lg" placeholder="Mother's name" onChange={(e)=>setMothername(e.target.value)} required />
                         
                     </div>
                     <div class="mb-3">
 
                         <label for="fathername">Father's Name</label>
                         
-                        <input type="text" name="fathername" class="form-control form-control-lg" placeholder="Father's name" required />
+                        <input type="text" name="fathername" value={fathername} class="form-control form-control-lg" placeholder="Father's name" onChange={(e)=>setFathername(e.target.value)} required />
                         
                     </div>
 
@@ -233,7 +243,7 @@ export const Student=()=>{
 
                         <label for="address">Address</label>
                         
-                        <textarea type="text" name="address" class="form-control form-control-lg" placeholder="Address" required />
+                        <textarea type="text" name="address" value={address} class="form-control form-control-lg" placeholder="Address" onChange={(e)=>setAddress(e.target.value)} required />
                         
                     </div>
             
