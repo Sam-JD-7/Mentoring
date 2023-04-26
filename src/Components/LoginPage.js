@@ -37,7 +37,7 @@ function LoginPage() {
         })
     e.preventDefault();
     localStorage.setItem("uemail",uemail);
-  }
+    }
 
   return (
     <div className='img'>
