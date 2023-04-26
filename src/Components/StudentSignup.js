@@ -149,6 +149,39 @@ export const Student=()=>{
                         <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter email" required />
                     
                     </div>
+                    <div class="mb-3">
+
+                        <label for="regno">Register Number</label>
+                        
+                        <input type="text" name="regno" class="form-control form-control-lg" placeholder="Register Number" required />
+                        
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="password">Password</label>
+                        
+                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                        
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="gender">Gender</label>
+                        
+                        <select type="password" name="password" class="form-control form-control-lg" placeholder="Password" required >
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+
+                        <label for="dob">DOB</label>
+                        
+                        <input type="date" name="dob" class="form-control form-control-lg" placeholder="DOB" required />
+                        
+                    </div>
+
                     {/* <div class="mb-3">
 
                         <label for="phone">Phone</label>
@@ -190,7 +223,7 @@ export const Student=()=>{
                     </div>
                     <div class="mb-3">
 
-                        <label for="fathername"></label>
+                        <label for="fathername">Father's Name</label>
                         
                         <input type="text" name="fathername" class="form-control form-control-lg" placeholder="Father's name" required />
                         
@@ -198,23 +231,7 @@ export const Student=()=>{
 
                     <div class="mb-3">
 
-                        <label for="regno"></label>
-                        
-                        <input type="text" name="regno" class="form-control form-control-lg" placeholder="Register Number" required />
-                        
-                    </div>
-
-                    <div class="mb-3">
-
-                        <label for="password"></label>
-                        
-                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
-                        
-                    </div>
-
-                    <div class="mb-3">
-
-                        <label for="address"></label>
+                        <label for="address">Address</label>
                         
                         <textarea type="text" name="address" class="form-control form-control-lg" placeholder="Address" required />
                         
