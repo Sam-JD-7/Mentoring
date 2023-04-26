@@ -178,7 +178,7 @@ export const Student=()=>{
 
                         <label for="gender">Gender</label>
                         
-                        <select value={gender} class="form-control form-control-lg"  onChange={(e)=>setGender(e.target.value)} required >
+                        <select value={gender} name="gender" class="form-control form-control-lg"  onChange={(e)=>setGender(e.target.value)} required >
                         <option value="" selected disabled hidden>--Choose here--</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
