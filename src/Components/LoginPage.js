@@ -26,9 +26,17 @@ function LoginPage() {
 }
   const handleUserSubmit=(e)=>
   {
+    axios.get("http://localhost:3002/student/login",{params:{email:uemail,password:upwd}})
+    .then(response=>
+      {
+      navigate('/semester')
+      })
+      .catch(err=>
+        {
+          alert(err.response.data)
+        })
     e.preventDefault();
     localStorage.setItem("uemail",uemail);
-     navigate('/semester')
   }
 
   return (
