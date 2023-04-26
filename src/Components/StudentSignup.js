@@ -149,27 +149,27 @@ export const Student=()=>{
                         <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter email" required />
                     
                     </div>
-                    <div class="mb-3">
+                    {/* <div class="mb-3">
 
                         <label for="phone">Phone</label>
                         
                         <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter phone" required />
                         
                     </div>
-            
-                    <div class="mb-3">
+             */}
+                    {/* <div class="mb-3">
                     
                         <label for="image" class="form-label">Upload Photo</label>
                         
                         <input class="form-control form-control-lg" type="file" name="image" />
                     
-                    </div>
+                    </div> */}
 
                     <div class="mb-3">
 
                         <label for="mentorname">Mentor Name</label>
                         
-                        <input type="tel" name="mentorname" class="form-control form-control-lg" placeholder="Mentor Name" required />
+                        <input type="text" name="mentorname" class="form-control form-control-lg" placeholder="Mentor Name" required />
                         
                     </div>
 
@@ -177,21 +177,52 @@ export const Student=()=>{
 
                         <label for="mentormail">Mentor Email</label>
                         
-                        <input type="tel" name="mentormail" class="form-control form-control-lg" placeholder="MentorEmail" required />
+                        <input type="text" name="mentormail" class="form-control form-control-lg" placeholder="MentorEmail" required />
                         
                     </div>
 
                     <div class="mb-3">
 
-                        <label for="phone">Phone</label>
+                        <label for="mothername">Mother's Name</label>
                         
-                        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter phone" required />
+                        <input type="text" name="mothername" class="form-control form-control-lg" placeholder="Mother's name" required />
+                        
+                    </div>
+                    <div class="mb-3">
+
+                        <label for="fathername"></label>
+                        
+                        <input type="text" name="fathername" class="form-control form-control-lg" placeholder="Father's name" required />
+                        
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="regno"></label>
+                        
+                        <input type="text" name="regno" class="form-control form-control-lg" placeholder="Register Number" required />
+                        
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="password"></label>
+                        
+                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                        
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="address"></label>
+                        
+                        <textarea type="text" name="address" class="form-control form-control-lg" placeholder="Address" required />
                         
                     </div>
             
                     <div class="mb-3 d-grid">
                     
-                        <input type="submit" name="submit" value="Add User" class="btn btn-primary btn-lg" />
+                        <input type="submit" name="submit" value="SignUp" class="btn btn-primary btn-lg" />
                     
                     </div>
                     

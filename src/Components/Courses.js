@@ -36,9 +36,8 @@ function Courses() {
   return (
     <>
     <div className="coursesBg" >
+      <div className='Blur'>
       <div className='entry'>
-        <br></br>
-        <br></br>
         <Button onClick={() => setDisplay(true)} variant="light">Add Subject</Button>
         {display ?
           <form onSubmit={add}>
@@ -63,7 +62,7 @@ function Courses() {
             </div>
             <button type="submit">Add</button>
           </form> : ""}
-        
+        </div>
       {list.length >= 1 ?
         <>
           <table className="styled-table">
@@ -117,6 +116,7 @@ function Courses() {
 
 
         : ""}
+        
         </div>
         </div>
         </>
