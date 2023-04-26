@@ -2,6 +2,33 @@ import React from 'react'
 import { useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+const add=(req,res)=>
+{
+    alert(req.body.name)
+//     axios.post("http://localhost:3002/student/createstudent",
+//     {
+//         "studentname": "query",
+//         "studentemail": "samjebadurait.20cse@kongu.edu",
+//         "password":"12345678",
+//         "studentregno": "20csr186",
+//         "studentdob": "2002-08-25",
+//         "fathersname": "Hero",
+//         "mothersname": "Batman",
+//         "gender": "male",
+//         "address": "Kangayam",
+//         "mentorname": "savitha",
+//         "mentormail": "savitha@kkongu.edu"
+//     })
+//     .then(res=>
+//         {
+//             console.log(res)
+//         })
+//         .catch(err=>
+//             {
+//                 console.log(err)
+//             })
+
+}
 // export const Student=()=>
 // {
 //     const navigate=useNavigate();
@@ -133,27 +160,27 @@ export const Student=()=>{
         
             <div class="card-body p-4">
         
-                <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                <form onSubmit={add} id="add-form" enctype="multipart/form-data">
         
                     <div class="mb-3">
         
-                        <label for="name">Name</label>
+                        <label>Name</label>
                         
-                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter name" required />  
+                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter name"  />  
                     </div>
         
                     <div class="mb-3">
                     
                         <label for="email">Email</label>
                         
-                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter email" required />
+                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter email"  />
                     
                     </div>
                     <div class="mb-3">
 
                         <label for="regno">Register Number</label>
                         
-                        <input type="text" name="regno" class="form-control form-control-lg" placeholder="Register Number" required />
+                        <input type="text" name="regno" class="form-control form-control-lg" placeholder="Register Number"  />
                         
                     </div>
 
@@ -161,7 +188,7 @@ export const Student=()=>{
 
                         <label for="password">Password</label>
                         
-                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password"  />
                         
                     </div>
 
@@ -169,7 +196,7 @@ export const Student=()=>{
 
                         <label for="gender">Gender</label>
                         
-                        <select type="password" name="password" class="form-control form-control-lg" placeholder="Password" required >
+                        <select type="password" name="gender" class="form-control form-control-lg" placeholder="Password"  >
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         </select>
@@ -178,7 +205,7 @@ export const Student=()=>{
 
                         <label for="dob">DOB</label>
                         
-                        <input type="date" name="dob" class="form-control form-control-lg" placeholder="DOB" required />
+                        <input type="date" name="dob" class="form-control form-control-lg" placeholder="DOB"  />
                         
                     </div>
 
@@ -186,7 +213,7 @@ export const Student=()=>{
 
                         <label for="phone">Phone</label>
                         
-                        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter phone" required />
+                        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter phone"  />
                         
                     </div>
              */}
@@ -202,7 +229,7 @@ export const Student=()=>{
 
                         <label for="mentorname">Mentor Name</label>
                         
-                        <input type="text" name="mentorname" class="form-control form-control-lg" placeholder="Mentor Name" required />
+                        <input type="text" name="mentorname" class="form-control form-control-lg" placeholder="Mentor Name"  />
                         
                     </div>
 
@@ -210,7 +237,7 @@ export const Student=()=>{
 
                         <label for="mentormail">Mentor Email</label>
                         
-                        <input type="text" name="mentormail" class="form-control form-control-lg" placeholder="MentorEmail" required />
+                        <input type="text" name="mentormail" class="form-control form-control-lg" placeholder="MentorEmail"  />
                         
                     </div>
 
@@ -218,14 +245,14 @@ export const Student=()=>{
 
                         <label for="mothername">Mother's Name</label>
                         
-                        <input type="text" name="mothername" class="form-control form-control-lg" placeholder="Mother's name" required />
+                        <input type="text" name="mothername" class="form-control form-control-lg" placeholder="Mother's name"  />
                         
                     </div>
                     <div class="mb-3">
 
                         <label for="fathername">Father's Name</label>
                         
-                        <input type="text" name="fathername" class="form-control form-control-lg" placeholder="Father's name" required />
+                        <input type="text" name="fathername" class="form-control form-control-lg" placeholder="Father's name"  />
                         
                     </div>
 
@@ -233,7 +260,7 @@ export const Student=()=>{
 
                         <label for="address">Address</label>
                         
-                        <textarea type="text" name="address" class="form-control form-control-lg" placeholder="Address" required />
+                        <textarea type="text" name="address" class="form-control form-control-lg" placeholder="Address" />
                         
                     </div>
             
